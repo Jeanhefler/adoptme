@@ -10,21 +10,23 @@ public class Pet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String type;
 	private String name;
+	private String type;
 	private String sex;
 	private double weight;
 	private String image;
+	private boolean available;
 	
 	Pet(){
 	}
-	public Pet(Long id, String type, String name, String sex, double weight, String image) {
+	public Pet(Long id, String type, String name, String sex, double weight, String image, boolean available) {
 		this.id = id;
-		this.type = type;
 		this.name = name;
+		this.type = type;
 		this.sex = sex;
 		this.weight = weight;
 		this.image = image;
+		this.available = available;
 	}
 
 	public Long getId() {
@@ -62,6 +64,12 @@ public class Pet {
 	}
 	public void setImage(String image) {
 		this.image = image;
+	}
+	public boolean isAvailable() {
+		return available;
+	}
+	public void setAvailable(boolean available) {
+		this.available = available;
 	}
 	
 }

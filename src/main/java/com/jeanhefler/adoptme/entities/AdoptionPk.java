@@ -2,6 +2,7 @@ package com.jeanhefler.adoptme.entities;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 
 @Embeddable
@@ -9,7 +10,7 @@ public class AdoptionPk {
 	@OneToOne
 	@JoinColumn(name = "pet_id")
 	private Pet pet;
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "owner_id")
 	private Owner owner;
 	
