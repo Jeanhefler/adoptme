@@ -23,8 +23,9 @@ public class PetController {
 	private PetService petService;
 	
 	@GetMapping
-	List<Pet> getAllPets(){
+	List<Pet> getAllPets()  throws Exception {
 		return petService.getAllPets();
+		
 	}
 	@GetMapping("{id}")
 	public Pet getPetById(@PathVariable Long id) {
