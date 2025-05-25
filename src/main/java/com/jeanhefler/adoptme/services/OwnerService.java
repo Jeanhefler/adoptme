@@ -28,6 +28,7 @@ public class OwnerService {
 		Owner owner = getOwnerById(id);
 		owner.setName(ownerBody.getName());
 		owner.setEmail(ownerBody.getEmail());
+		owner.setPassword(ownerBody.getPassword());
 		return ownerRepository.save(owner);
 	}
 	public void deleteOwner(Long id) {
